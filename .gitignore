@@ -1,0 +1,19 @@
+# deps
+node_modules/
+
+# Next.js
+.next/
+out/
+
+# env
+.env*.local
+
+# OS
+.DS_Store
+
+# debug
+npm-debug.log*
+
+# handoff (design reference, not part of the repo)
+handoff/
+rrawi-handoff.zip
