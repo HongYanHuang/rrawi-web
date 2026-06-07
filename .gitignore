@@ -5,8 +5,9 @@ node_modules/
 .next/
 out/
 
-# env
+# env — .env.development is safe to commit (no secrets)
 .env*.local
+.env.production
 
 # OS
 .DS_Store
