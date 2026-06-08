@@ -133,7 +133,7 @@ export default async function TourPage({ params }: Props) {
           <div>
             <div className="reveal">
               <h2 style={{ marginBottom: '18px' }}>A walk through {tour.city}</h2>
-              {tour.description_short.split('\n\n').map((para, i) => (
+              {(tour.description_short ?? '').split('\n\n').filter(Boolean).map((para, i) => (
                 <p key={i} style={{ fontSize: '18px', lineHeight: 1.7, color: 'var(--ink-2)', margin: '0 0 16px' }}>
                   {para}
                 </p>

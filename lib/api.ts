@@ -1,3 +1,5 @@
+import { MOCK_TOURS, MOCK_CITIES, MOCK_TOUR_DETAIL } from './mock-data'
+
 const API_BASE = process.env.NEXT_PUBLIC_API_BASE ?? 'https://api.rrawi.com'
 
 export interface TourSummary {
@@ -26,8 +28,8 @@ export interface TourStop {
 export interface TourDetail extends TourSummary {
   narrator_avatar_url?: string
   narrator_quote?: string
-  description_short: string
-  city_context?: string
+  description_short: string | null
+  city_context?: string | null
   stops_preview: TourStop[]
   stops_hidden_count: number
   tags: string[]
@@ -41,21 +43,18 @@ export interface City {
   tour_count: number
 }
 
-async function apiFetch<T>(path: string, fallback: () => Promise<T>): Promise<T> {
+async function apiFetch<T>(path: string, fallback: T): Promise<T> {
   try {
     const res = await fetch(`${API_BASE}${path}`, { next: { revalidate: 3600 } })
     if (!res.ok) throw new Error(`HTTP ${res.status}`)
     return res.json() as Promise<T>
   } catch {
-    return fallback()
+    return fallback
   }
 }
 
 export async function getTours(): Promise<TourSummary[]> {
-  return apiFetch('/web/tours', async () => {
-    const { MOCK_TOURS } = await import('./mock-data')
-    return MOCK_TOURS
-  })
+  return apiFetch('/web/tours', MOCK_TOURS)
 }
 
 export async function getTour(citySlug: string, tourSlug: string): Promise<TourDetail | null> {
@@ -66,7 +65,6 @@ export async function getTour(citySlug: string, tourSlug: string): Promise<TourD
     if (!res.ok) return null
     return res.json()
   } catch {
-    const { MOCK_TOUR_DETAIL } = await import('./mock-data')
     if (MOCK_TOUR_DETAIL.city_slug === citySlug && MOCK_TOUR_DETAIL.slug === tourSlug) {
       return MOCK_TOUR_DETAIL
     }
@@ -75,17 +73,10 @@ export async function getTour(citySlug: string, tourSlug: string): Promise<TourD
 }
 
 export async function getCities(): Promise<City[]> {
-  return apiFetch('/web/cities', async () => {
-    const { MOCK_CITIES } = await import('./mock-data')
-    return MOCK_CITIES
-  })
+  return apiFetch('/web/cities', MOCK_CITIES)
 }
 
 export async function getAllTourSlugs(): Promise<{ city: string; slug: string }[]> {
-  return apiFetch('/web/tours', async () => {
-    const { MOCK_TOURS } = await import('./mock-data')
-    return MOCK_TOURS
-  }).then(tours =>
-    tours.map(t => ({ city: t.city_slug, slug: t.slug }))
-  )
+  const tours = await apiFetch('/web/tours', MOCK_TOURS)
+  return tours.map(t => ({ city: t.city_slug, slug: t.slug }))
 }
