@@ -5,6 +5,7 @@ import StoreBadge from '@/components/StoreBadge'
 import PhoneMockup from '@/components/PhoneMockup'
 import TourCard from '@/components/TourCard'
 import RevealInit from '@/components/RevealInit'
+import Image from 'next/image'
 import { getTours, getCities } from '@/lib/api'
 import { toDisplayName } from '@/lib/utils'
 
@@ -142,8 +143,13 @@ export default async function HomePage() {
             </p>
             <a className="btn btn-primary" href="#download">Walk your first tour</a>
           </div>
-          <div className="reveal" style={{ order: 1 }}>
-            <div className="ph" data-label="Narrator · Elena Conti, Rome" style={{ aspectRatio: '4/5', borderRadius: 'var(--r)' }} />
+          <div className="reveal" style={{ order: 1, borderRadius: 'var(--r)', overflow: 'hidden', aspectRatio: '4/5', position: 'relative' }}>
+            <Image
+              src="/screenshot-chapters.png"
+              alt="raawi app — chapters and stops view"
+              fill
+              style={{ objectFit: 'cover', objectPosition: 'top' }}
+            />
           </div>
         </div>
       </section>
