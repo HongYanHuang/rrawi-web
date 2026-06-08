@@ -59,15 +59,15 @@ h3 { font-size: clamp(20px, 2.4vw, 26px); letter-spacing: -0.02em; }
 
 /* ── wordmark ── */
 .wordmark {
-  display: inline-flex; align-items: baseline; gap: 2px;
+  display: inline-flex; align-items: flex-end; gap: 2px;
   font-weight: 700; font-size: 24px; letter-spacing: -0.04em; color: var(--ink);
 }
 .wordmark .dot {
   width: 6px; height: 6px; border-radius: 50%;
-  background: var(--accent); align-self: flex-end; margin-bottom: 5px;
+  background: var(--accent); margin-bottom: 4px; flex-shrink: 0;
 }
 .wordmark.lg { font-size: 34px; }
-.wordmark.lg .dot { width: 8px; height: 8px; margin-bottom: 7px; }
+.wordmark.lg .dot { width: 8px; height: 8px; margin-bottom: 6px; }
 .wordmark.inv { color: var(--paper); }
 
 /* ── buttons ── */

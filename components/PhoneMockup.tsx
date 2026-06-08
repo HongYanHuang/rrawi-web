@@ -5,7 +5,7 @@ export default function PhoneMockup() {
     <div
       className="hero-phone"
       style={{
-        width: '300px', height: '610px', borderRadius: '46px',
+        width: '300px', height: '651px', borderRadius: '46px',
         background: '#000',
         boxShadow: '0 40px 80px rgba(27,25,21,0.22),0 0 0 9px var(--ink),0 0 0 10px rgba(255,255,255,0.05)',
         position: 'relative', overflow: 'hidden', flexShrink: 0,
