@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="footer-cols">
           <div className="footer-col">
             <Link href="/" className="wordmark inv lg">
-              raawi<span className="dot" />
+              rrawi<span className="dot" />
             </Link>
             <p style={{ margin: '16px 0 22px', color: 'rgba(246,241,231,0.6)', fontSize: '15px', maxWidth: '300px', lineHeight: '1.6' }}>
               Audio walking tours, narrated by people who actually know the place. Walk slowly. Listen longer.
@@ -46,7 +46,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <span>© 2026 raawi. Inspired by ♥️ over 🗺️ &amp; Edward Gibbon.</span>
+          <span>© 2026 rrawi. Inspired by ♥️ over 🗺️ &amp; Edward Gibbon.</span>
           <span>Made for walking.</span>
         </div>
       </div>

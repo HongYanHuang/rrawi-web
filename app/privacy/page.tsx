@@ -4,7 +4,7 @@ import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: 'Privacy Policy',
-  description: 'raawi Privacy Policy — how we collect, use, and protect your information.',
+  description: 'rrawi Privacy Policy — how we collect, use, and protect your information.',
   alternates: { canonical: 'https://www.rrawi.com/privacy' },
 }
 
@@ -27,8 +27,8 @@ export default function PrivacyPage() {
         <div className="wrap prose">
 
           <h2>1. Introduction</h2>
-          <p>This Privacy Policy explains how [COMPANY LEGAL NAME] (&ldquo;raawi&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;) collects,
-            uses, and shares information when you use the raawi app, website, and related services
+          <p>This Privacy Policy explains how [COMPANY LEGAL NAME] (&ldquo;rrawi&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;) collects,
+            uses, and shares information when you use the rrawi app, website, and related services
             (the &ldquo;Service&rdquo;).</p>
 
           <h2>2. Information we collect</h2>
@@ -62,7 +62,7 @@ export default function PrivacyPage() {
             data-processing agreements.</p>
 
           <h2>5. Location data</h2>
-          <p>raawi uses your device location to power live tour navigation. You can control location permissions at
+          <p>rrawi uses your device location to power live tour navigation. You can control location permissions at
             any time through your device settings. If permission is denied, navigation features will not work but
             you can still listen to tour audio manually.</p>
 
@@ -75,7 +75,7 @@ export default function PrivacyPage() {
             (Account → Account settings → Delete account), which permanently removes your profile,
             history, and personalised tours. Depending on your location, you may also have rights to
             access, correct, or export your personal information — contact us at{' '}
-            <a href="mailto:privacy@raawi.app">privacy@raawi.app</a> to make a request.</p>
+            <a href="mailto:privacy@rrawi.com">privacy@rrawi.com</a> to make a request.</p>
 
           <h2>8. Children&apos;s privacy</h2>
           <p>The Service is not directed to children under 13, and we do not knowingly collect their personal
@@ -95,7 +95,7 @@ export default function PrivacyPage() {
 
           <h2>12. Contact</h2>
           <p>Questions about your privacy? Contact us at{' '}
-            <a href="mailto:privacy@raawi.app">privacy@raawi.app</a>.
+            <a href="mailto:privacy@rrawi.com">privacy@rrawi.com</a>.
           </p>
 
         </div>

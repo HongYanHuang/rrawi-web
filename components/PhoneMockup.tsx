@@ -19,7 +19,7 @@ export default function PhoneMockup() {
 
       <Image
         src="/screenshot-map.png"
-        alt="raawi app — tour map view"
+        alt="rrawi app — tour map view"
         fill
         style={{ objectFit: 'cover', objectPosition: 'top' }}
         priority

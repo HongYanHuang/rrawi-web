@@ -10,9 +10,9 @@ import { getTours, getCities } from '@/lib/api'
 import { toDisplayName } from '@/lib/utils'
 
 export const metadata: Metadata = {
-  title: 'raawi — Audio walking tours, narrated by people who know the place',
+  title: 'rrawi — Audio walking tours, narrated by people who know the place',
   description:
-    'raawi turns a city walk into a story. Narrated audio tours that unfold step by step, made by people who actually know the place. Available in Rome, Kyoto, Lisbon, and more.',
+    'rrawi turns a city walk into a story. Narrated audio tours that unfold step by step, made by people who actually know the place. Available in Rome, Kyoto, Lisbon, and more.',
   alternates: { canonical: 'https://www.rrawi.com' },
 }
 
@@ -75,7 +75,7 @@ export default async function HomePage() {
               <span style={{ color: 'var(--accent)' }}>Walk into it.</span>
             </h1>
             <p className="lead reveal" style={{ margin: '24px 0 32px', maxWidth: '480px' }}>
-              raawi turns a walk into a told tale — narrated audio tours that unfold step by step,
+              rrawi turns a walk into a told tale — narrated audio tours that unfold step by step,
               made by people who actually know the place.
             </p>
             <div className="store-badges reveal">
@@ -136,7 +136,7 @@ export default async function HomePage() {
               keeping a place alive by speaking it.
             </p>
             <p className="muted" style={{ fontSize: '17px', lineHeight: 1.7, marginBottom: '24px' }}>
-              Every raawi tour is voiced by someone who belongs to the place: a historian who grew up three
+              Every rrawi tour is voiced by someone who belongs to the place: a historian who grew up three
               streets from the Forum, a poet who knows which Lisbon staircase catches the last of the light.
               No scripts read by strangers. No facts without feeling. Just a knowledgeable voice, walking
               beside you, turning a route into a story you&apos;ll remember long after your feet stop aching.
@@ -146,7 +146,7 @@ export default async function HomePage() {
           <div className="reveal" style={{ order: 1, borderRadius: 'var(--r)', overflow: 'hidden', aspectRatio: '4/5', position: 'relative' }}>
             <Image
               src="/screenshot-chapters.png"
-              alt="raawi app — chapters and stops view"
+              alt="rrawi app — chapters and stops view"
               fill
               style={{ objectFit: 'cover', objectPosition: 'top' }}
             />
@@ -215,7 +215,7 @@ export default async function HomePage() {
             Your next walk is<br />already a story.
           </h2>
           <p className="reveal lead" style={{ color: 'rgba(246,241,231,0.85)', margin: '20px auto 32px', maxWidth: '480px' }}>
-            Download raawi and let the city tell you what it remembers.
+            Download rrawi and let the city tell you what it remembers.
           </p>
           <div className="reveal store-badges" style={{ justifyContent: 'center' }}>
             <StoreBadge platform="ios" light />

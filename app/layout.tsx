@@ -13,14 +13,14 @@ const sourceSans = Source_Sans_3({
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | raawi',
-    default: 'raawi — Audio walking tours, narrated by people who know the place',
+    template: '%s | rrawi',
+    default: 'rrawi — Audio walking tours, narrated by people who know the place',
   },
   description:
-    'raawi turns a city walk into a story. Narrated audio tours that unfold as you walk, made by locals who actually know the place. Rome, Kyoto, Lisbon, and more.',
+    'rrawi turns a city walk into a story. Narrated audio tours that unfold as you walk, made by locals who actually know the place. Rome, Kyoto, Lisbon, and more.',
   metadataBase: new URL('https://www.rrawi.com'),
   openGraph: {
-    siteName: 'raawi',
+    siteName: 'rrawi',
     type: 'website',
     locale: 'en_US',
   },

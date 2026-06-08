@@ -5,7 +5,7 @@ export default function Nav() {
     <nav className="nav">
       <div className="nav-inner">
         <Link href="/" className="wordmark">
-          raawi<span className="dot" />
+          rrawi<span className="dot" />
         </Link>
         <div className="nav-links">
           <Link href="/#how">How it works</Link>

@@ -1,10 +1,10 @@
-# raawi Web API — Request Document
+# rrawi Web API — Request Document
 
 **To:** Backend team  
 **From:** Frontend / Web  
 **Base URL:** `https://api.rrawi.com`  
 **Auth:** None required — all endpoints are public, read-only, web-scoped  
-**Purpose:** Power the raawi.com marketing/SEO site (Next.js, ISR with 1-hour cache)
+**Purpose:** Power the rrawi.com marketing/SEO site (Next.js, ISR with 1-hour cache)
 
 ---
 

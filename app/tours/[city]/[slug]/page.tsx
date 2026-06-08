@@ -26,11 +26,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!tour) return {}
   return {
     title: `${tour.title_display} — Audio Walking Tour in ${tour.city}`,
-    description: `Explore ${tour.city} with ${tour.title_display}, a ${tour.duration_label} audio walking tour narrated by locals. Download raawi.`,
+    description: `Explore ${tour.city} with ${tour.title_display}, a ${tour.duration_label} audio walking tour narrated by locals. Download rrawi.`,
     alternates: { canonical: `https://www.rrawi.com/tours/${city}/${slug}` },
     openGraph: {
       title: `${tour.title_display} — Audio Walking Tour in ${tour.city}`,
-      description: `Explore ${tour.city} with ${tour.title_display}, a ${tour.duration_label} audio walking tour narrated by locals. Download raawi.`,
+      description: `Explore ${tour.city} with ${tour.title_display}, a ${tour.duration_label} audio walking tour narrated by locals. Download rrawi.`,
       type: 'website',
       images: tour.cover_image_url ? [{ url: tour.cover_image_url }] : [],
     },
@@ -59,7 +59,7 @@ export default async function TourPage({ params }: Props) {
         name: s.name,
       })),
     },
-    provider: { '@type': 'Organization', name: 'raawi', url: 'https://www.rrawi.com' },
+    provider: { '@type': 'Organization', name: 'rrawi', url: 'https://www.rrawi.com' },
   }
 
   const heroStyle: React.CSSProperties = {
@@ -230,7 +230,7 @@ export default async function TourPage({ params }: Props) {
               )}
               <div style={{ fontWeight: 700, fontSize: '18px', margin: '16px 0 4px' }}>Free to walk</div>
               <div className="muted" style={{ fontSize: '14px', marginBottom: '16px' }}>
-                Download raawi and start this tour in seconds.
+                Download rrawi and start this tour in seconds.
               </div>
               <div className="store-badges" style={{ flexDirection: 'column' }}>
                 <StoreBadge platform="ios" />
@@ -258,7 +258,7 @@ export default async function TourPage({ params }: Props) {
         <div className="wrap" style={{ textAlign: 'center', maxWidth: '680px' }}>
           <h2 className="reveal" style={{ color: 'var(--paper)' }}>Ready to walk {tour.city}?</h2>
           <p className="reveal lead" style={{ color: 'rgba(246,241,231,0.85)', margin: '16px auto 28px', maxWidth: '440px' }}>
-            Download raawi and let {tour.narrator_name} walk with you.
+            Download rrawi and let {tour.narrator_name} walk with you.
           </p>
           <div className="reveal store-badges" style={{ justifyContent: 'center' }}>
             <StoreBadge platform="ios" light />

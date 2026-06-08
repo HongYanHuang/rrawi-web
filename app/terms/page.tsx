@@ -4,7 +4,7 @@ import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: 'Terms & Conditions',
-  description: 'raawi Terms & Conditions — the rules that govern your use of the raawi app and website.',
+  description: 'rrawi Terms & Conditions — the rules that govern your use of the rrawi app and website.',
   alternates: { canonical: 'https://www.rrawi.com/terms' },
 }
 
@@ -27,9 +27,9 @@ export default function TermsPage() {
         <div className="wrap prose">
 
           <h2>1. Agreement to terms</h2>
-          <p>These Terms &amp; Conditions (&ldquo;Terms&rdquo;) govern your access to and use of the raawi mobile
+          <p>These Terms &amp; Conditions (&ldquo;Terms&rdquo;) govern your access to and use of the rrawi mobile
             application, website, and related services (collectively, the &ldquo;Service&rdquo;) provided by [COMPANY
-            LEGAL NAME] (&ldquo;raawi&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;). By creating an account or using the Service,
+            LEGAL NAME] (&ldquo;rrawi&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;). By creating an account or using the Service,
             you agree to be bound by these Terms.</p>
 
           <h2>2. Eligibility &amp; accounts</h2>
@@ -48,12 +48,12 @@ export default function TermsPage() {
           </ul>
 
           <h2>4. Content &amp; intellectual property</h2>
-          <p>All tours, audio narration, written descriptions, imagery, trademarks, and software are owned by raawi
+          <p>All tours, audio narration, written descriptions, imagery, trademarks, and software are owned by rrawi
             or its licensors and are protected by intellectual-property laws.</p>
 
           <h2>5. Personalised &amp; user-created tours</h2>
           <p>The Service may allow you to generate personalised tours using AI. You retain ownership of the
-            preferences and prompts you provide. raawi retains a licence to store and process those inputs and
+            preferences and prompts you provide. rrawi retains a licence to store and process those inputs and
             outputs to operate and improve the Service.</p>
 
           <h2>6. Location services</h2>
@@ -66,7 +66,7 @@ export default function TermsPage() {
             local laws and traffic.</p>
 
           <h2>8. Limitation of liability</h2>
-          <p>To the maximum extent permitted by law, raawi shall not be liable for any indirect, incidental, special,
+          <p>To the maximum extent permitted by law, rrawi shall not be liable for any indirect, incidental, special,
             consequential, or punitive damages arising from your use of the Service.</p>
 
           <h2>9. Termination</h2>
@@ -82,7 +82,7 @@ export default function TermsPage() {
 
           <h2>12. Contact</h2>
           <p>Questions about these Terms? Contact us at{' '}
-            <a href="mailto:legal@raawi.app">legal@raawi.app</a>.
+            <a href="mailto:legal@rrawi.com">legal@rrawi.com</a>.
           </p>
 
         </div>
