@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import NavCta from './NavCta'
 
 export default function Nav() {
   return (
@@ -14,9 +15,7 @@ export default function Nav() {
           <Link href="/#story">Our story</Link>
         </div>
         <div className="nav-cta">
-          <Link className="btn btn-primary" href="/#download" style={{ padding: '10px 18px', fontSize: '15px' }}>
-            Get the app
-          </Link>
+          <NavCta />
         </div>
       </div>
     </nav>
