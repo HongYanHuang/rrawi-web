@@ -32,8 +32,6 @@ export default function Footer() {
             <h4>Company</h4>
             <ul>
               <li><Link href="/#story">Our story</Link></li>
-              <li><a href="#">Become a narrator</a></li>
-              <li><a href="#">Press</a></li>
               <li><a href="#">Contact</a></li>
             </ul>
           </div>
