@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import type { TourSummary } from '@/lib/api'
+import { toDisplayName } from '@/lib/utils'
 
 interface Props {
   tour: TourSummary
@@ -19,15 +20,17 @@ export default function TourCard({ tour, width = 300 }: Props) {
           background: 'rgba(246,241,231,0.92)', borderRadius: '99px',
           padding: '5px 12px', fontSize: '12px', fontWeight: 600,
         }}>
-          {tour.city}
+          {toDisplayName(tour.city)}
         </span>
       </div>
       <div style={{ padding: '16px 18px 18px' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '8px' }}>
           <h3 style={{ fontSize: '19px' }}>{tour.title_display}</h3>
-          <span style={{ color: 'var(--accent)', fontWeight: 700, fontSize: '14px', whiteSpace: 'nowrap' }}>
-            ★ {tour.rating}
-          </span>
+          {tour.rating != null && (
+            <span style={{ color: 'var(--accent)', fontWeight: 700, fontSize: '14px', whiteSpace: 'nowrap' }}>
+              ★ {tour.rating}
+            </span>
+          )}
         </div>
         <div className="muted" style={{ fontSize: '14px', marginTop: '8px' }}>
           {tour.total_stops} stops · {tour.duration_label}

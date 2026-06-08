@@ -7,6 +7,7 @@ import StoreBadge from '@/components/StoreBadge'
 import TourCard from '@/components/TourCard'
 import RevealInit from '@/components/RevealInit'
 import { getTour, getTours, getAllTourSlugs } from '@/lib/api'
+import { toDisplayName } from '@/lib/utils'
 
 export const revalidate = 3600
 
@@ -82,7 +83,7 @@ export default async function TourPage({ params }: Props) {
       <div className="wrap" style={{ padding: '18px 24px 0', fontSize: '14px', color: 'var(--ink-3)' }}>
         <Link href="/" style={{ color: 'var(--ink-3)' }}>Home</Link>
         {' › '}
-        <Link href="/#cities" style={{ color: 'var(--ink-3)' }}>{tour.city}</Link>
+        <Link href="/#cities" style={{ color: 'var(--ink-3)' }}>{toDisplayName(tour.city)}</Link>
         {' › '}
         <span style={{ color: 'var(--ink-2)' }}>{tour.title_display}</span>
       </div>
@@ -94,18 +95,24 @@ export default async function TourPage({ params }: Props) {
             background: 'rgba(246,241,231,0.18)', borderColor: 'rgba(246,241,231,0.3)',
             color: 'var(--paper)', marginBottom: '16px',
           }}>
-            {tour.city} · Walking Tour
+            {toDisplayName(tour.city)} · Walking Tour
           </div>
           <h1 style={{ color: 'var(--paper)', maxWidth: '620px' }}>{tour.title_display}</h1>
           <div style={{
             display: 'flex', alignItems: 'center', gap: '18px',
             marginTop: '18px', flexWrap: 'wrap', fontSize: '15px', fontWeight: 600,
           }}>
-            <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
-              ★ {tour.rating}{' '}
-              <span style={{ opacity: 0.8, fontWeight: 400 }}>({tour.review_count} reviews)</span>
-            </span>
-            <span style={{ opacity: 0.6 }}>·</span>
+            {tour.rating != null && (
+              <>
+                <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+                  ★ {tour.rating}{' '}
+                  {tour.review_count != null && (
+                    <span style={{ opacity: 0.8, fontWeight: 400 }}>({tour.review_count} reviews)</span>
+                  )}
+                </span>
+                <span style={{ opacity: 0.6 }}>·</span>
+              </>
+            )}
             <span>{tour.total_stops} stops</span>
             <span style={{ opacity: 0.6 }}>·</span>
             <span>{tour.duration_label}</span>

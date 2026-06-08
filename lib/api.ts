@@ -8,8 +8,8 @@ export interface TourSummary {
   title_display: string
   cover_image_url?: string
   cover_gradient?: string
-  rating: number
-  review_count: number
+  rating: number | null
+  review_count: number | null
   total_stops: number
   duration_label: string
   distance_label?: string

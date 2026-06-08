@@ -6,6 +6,7 @@ import PhoneMockup from '@/components/PhoneMockup'
 import TourCard from '@/components/TourCard'
 import RevealInit from '@/components/RevealInit'
 import { getTours, getCities } from '@/lib/api'
+import { toDisplayName } from '@/lib/utils'
 
 export const metadata: Metadata = {
   title: 'raawi — Audio walking tours, narrated by people who know the place',
@@ -163,7 +164,7 @@ export default async function HomePage() {
             {cities.map(c => (
               <a key={c.slug} href="#tours" className="city-item">
                 <span style={{ fontSize: '24px' }}>{c.icon}</span>
-                <span style={{ fontWeight: 600, fontSize: '16px' }}>{c.name}</span>
+                <span style={{ fontWeight: 600, fontSize: '16px' }}>{toDisplayName(c.name)}</span>
               </a>
             ))}
           </div>
